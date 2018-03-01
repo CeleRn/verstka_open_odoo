@@ -1,0 +1,19 @@
+<% if (page.headerBg) { %>
+  <% if (page.banner !== undefined) { %>
+    <header class="header header_invert" data-background-image="<%= page.banner %>">
+  <% } else { %>
+    <header class="header header_invert">
+  <% } %>
+<% } else { %>
+<header class="header">
+<% } %>
+
+
+
+  <div class="header__bg-gray"></div>
+  <%- partial('header/main-navbar') %>
+  <% if (page.subNavbar) { %>
+    <%- partial('header/sub-navbar') %>
+  <% } %>
+  
+</header>
