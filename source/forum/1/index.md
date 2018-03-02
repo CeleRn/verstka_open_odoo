@@ -1,6 +1,6 @@
 ---
-layout: forum-list
-title: Форумы
+layout: forum-index
+title: Вопросы и ответы
 headerBg: true
 breadcrumbs:
   - name: Форумы

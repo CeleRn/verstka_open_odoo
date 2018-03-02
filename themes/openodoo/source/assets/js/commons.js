@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "3a6ffb290601524c2913"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "bafbf5b2bb9eec52ef5f"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -13762,6 +13762,7 @@ __webpack_require__(25);
 __webpack_require__(26);
 __webpack_require__(27);
 __webpack_require__(28);
+__webpack_require__(29);
 
 /***/ }),
 /* 4 */
@@ -14919,6 +14920,13 @@ $(document).ready(function () {
         $('.main__header').css('background-image', 'url(' + url + ')');
     }
 });
+
+// Закрытие приветственной панели на форуме
+$('.forum_intro__close-icon').click(function () {
+    var currentHeight = $('.forum_intro').outerHeight();
+    $('.forum_intro').css('height', currentHeight);
+    $('.forum_intro').css('height', '0').css('margin', '0').css('padding', '0').css('overflow', 'hidden').css('opacity', '0');
+});
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
@@ -15189,6 +15197,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       id: "people-usage",
       viewBox: "0 0 24 24",
       url: __webpack_require__.p + "icons/icons-sprite.svg#people-usage",
+      toString: function () {
+        return this.url;
+      }
+    });
+
+/***/ }),
+/* 29 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony default export */ __webpack_exports__["default"] = ({
+      id: "section-menu-usage",
+      viewBox: "0 0 24 24",
+      url: __webpack_require__.p + "icons/icons-sprite.svg#section-menu-usage",
       toString: function () {
         return this.url;
       }

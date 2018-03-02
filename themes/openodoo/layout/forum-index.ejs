@@ -1,23 +1,523 @@
-<%- partial('common/main-header') %>
+<%- partial('common/main-header', {typePage: 'forum'}) %>
+
 <div class="container">
-  <div class="forums-list">
-    <a href="/forum/" class="forums-list__item forums-list-item">
-      <span class="forums-list-item__icon-block">
-          <%- partial('common/svg-sprite-element', {icon: "live-help", cssSelector: "forums-list-item__icon"}) %>
-      </span>
-      <span class="forums-list-item__title">Вопросы и ответы</span>
-    </a>
-    <a href="/forum/" class="forums-list__item forums-list-item">
-      <span class="forums-list-item__icon-block">
-          <%- partial('common/svg-sprite-element', {icon: "link", cssSelector: "forums-list-item__icon"}) %>
-      </span>
-      <span class="forums-list-item__title">Полезные ссылки</span>
-    </a>
-    <a href="/forum/" class="forums-list__item forums-list-item">
-      <span class="forums-list-item__icon-block">
-          <%- partial('common/svg-sprite-element', {icon: "people", cssSelector: "forums-list-item__icon"}) %>
-      </span>
-      <span class="forums-list-item__title">Работа сообщества</span>
-    </a>
+  <div class="section-navbar">
+      <button type="button" class="section-navbar__menu-togger section-menu-togger collapsed">
+        <%- partial('common/svg-sprite-element', {icon: "section-menu", cssSelector: "section-menu-togger__icon section-menu-togger__icon_close"}) %>
+        <%- partial('common/svg-sprite-element', {icon: "close", cssSelector: "section-menu-togger__icon section-menu-togger__icon_open"}) %>
+      </button>
+      <a href="/forum/1" class="section-navbar__title">Вопросы и ответы</a>
+      <nav class="section-navbar__menu section-menu">
+        <a class="section-menu__link" href="/forum/1?sorting=relevancy+desc">Тренды</a>
+        <a class="section-menu__link" href="/forum/1?sorting=create_date+desc">Свежайшее</a>
+        <a class="section-menu__link" href="/forum/1/users">Люди</a>
+        <a class="section-menu__link" href="/forum/1/tag">Теги</a>
+        <a class="section-menu__link" href="/forum/1/badge">Значки</a>
+      </nav>
+      <button href="#" class="section-navbar__search-toggler search-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu"
+      aria-expanded="false" aria-label="Toggle main menu">
+        <%- partial('common/svg-sprite-element', {icon: "search", cssSelector: "search-toggler__icon search-toggler__icon_close"}) %>
+        <%- partial('common/svg-sprite-element', {icon: "close", cssSelector: "search-toggler__icon search-toggler__icon_open"}) %>
+      </button>
+      <a href="#" class="section-navbar__action-button">Задать вопрос</a>
   </div>
 </div>
+
+<div id="wrap" class="container">
+  <div class="row mb16">
+    <div class="col-sm-9">
+
+
+
+
+      <h2 class="page-header mt0">
+        4
+        <span> Посты </span>
+
+
+
+
+        <small class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+
+
+
+
+            по дате активности
+
+
+
+            <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-header">Фильтр включен</li>
+            <li class="active">
+              <a href="?filters=all">Все</a>
+            </li>
+            <li>
+              <a href="?filters=unanswered">Не отвечено</a>
+            </li>
+
+
+
+            <li class="dropdown-header">Сортировать по</li>
+            <li>
+              <a href="?sorting=relevancy+desc">Актуальность</a>
+            </li>
+            <li class="active">
+              <a href="?sorting=write_date+desc">Дата последней активности</a>
+            </li>
+            <li>
+              <a href="?sorting=create_date+desc">Свежайшее</a>
+            </li>
+            <li>
+              <a href="?sorting=child_count+desc">Больше всего ответов</a>
+            </li>
+            <li>
+              <a href="?sorting=vote_count+desc">Больше всего голосов</a>
+            </li>
+          </ul>
+        </small>
+      </h2>
+      <div class="mb16">
+
+        <div class="question">
+          <div class="pull-left">
+
+
+
+
+
+
+
+            <div class="vote text-center">
+              <a class="vote_up fa fa-caret-up no-decoration  karma_required" data-karma="5" data-href="/forum/1/post/cms-replacement-for-erp-and-ecommerce-2/upvote"></a>
+              <div class="vote_count text-muted">0</div>
+              <a class="vote_down fa fa-caret-down no-decoration  karma_required" data-karma="50" data-href="/forum/1/post/cms-replacement-for-erp-and-ecommerce-2/downvote"></a>
+
+
+
+            </div>
+
+          </div>
+
+          <div class="question-block">
+            <div class="question-name">
+              <a href="/forum/1/question/cms-replacement-for-erp-and-ecommerce-2">
+                <span>CMS replacement for ERP and eCommerce</span>
+              </a>
+
+
+
+
+
+
+            </div>
+            <div></div>
+
+            <a href="/forum/1/tag/ecommerce-3/questions">
+              <span style="margin-right: 4px;" class="pull-right label label-default">ecommerce</span>
+            </a>
+
+            <small class="text-muted">
+              <i class="fa fa-question-circle" title="Question"></i>
+
+
+              <span>По </span>
+              <span data-oe-many2one-id="1" data-oe-many2one-model="res.users" data-oe-contact-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;translate&quot;: false, &quot;type&quot;: &quot;contact&quot;, &quot;expression&quot;: &quot;question.create_uid&quot;, &quot;tagName&quot;: &quot;span&quot;, &quot;fields&quot;: [&quot;name&quot;, &quot;country_id&quot;], &quot;inherit_branding&quot;: null, &quot;country_image&quot;: true}"
+                style="display: inline-block;">
+                <address class="mb0" itemscope="itemscope" itemtype="http://schema.org/Organization">
+
+
+
+                  <div>
+
+                    <span itemprop="name">Administrator</span>
+
+
+                    <div>
+                      <span>
+                        <img class="img img-responsive country_flag" src="/web/image/res.country/233/image?unique=1758362" style="">
+                      </span>
+                    </div>
+                  </div>
+
+
+                  <div itemprop="address" itemscope="itemscope" itemtype="http://schema.org/PostalAddress">
+
+
+
+
+
+
+
+                  </div>
+                  <div>
+
+
+
+                  </div>
+
+
+                </address>
+              </span>
+              <span> • </span>
+              <span data-oe-original="2018-03-02 14:05:01">02.03.18, 14:05</span>
+              <span> • </span>
+              <span>8</span> Видs
+              <span> • </span>
+              <a href="/forum/1/question/cms-replacement-for-erp-and-ecommerce-2">
+
+                1 Ответ
+
+
+              </a>
+
+            </small>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="mb16">
+
+        <div class="question">
+          <div class="pull-left">
+
+
+
+
+
+
+
+            <div class="vote text-center">
+              <a class="vote_up fa fa-caret-up no-decoration  karma_required" data-karma="5" data-href="/forum/1/post/discover-odoo-an-open-source-erp-5/upvote"></a>
+              <div class="vote_count text-muted">1</div>
+              <a class="vote_down fa fa-caret-down no-decoration  karma_required" data-karma="50" data-href="/forum/1/post/discover-odoo-an-open-source-erp-5/downvote"></a>
+
+
+
+            </div>
+
+          </div>
+
+          <div class="question-block">
+            <div class="question-name">
+              <a href="/forum/1/question/discover-odoo-an-open-source-erp-5">
+                <span>Discover Odoo, an open source ERP.</span>
+              </a>
+
+
+
+
+
+              <a title="Перенаправление на внешнюю ссылку" class="text-muted" href="https://www.odoo.com">
+                <i class="fa fa-external-link forum_link"></i>
+              </a>
+
+
+            </div>
+            <div></div>
+
+            <a href="/forum/1/tag/development-4/questions">
+              <span style="margin-right: 4px;" class="pull-right label label-default">Development</span>
+            </a>
+
+            <small class="text-muted">
+
+
+              <i class="fa fa-link" title="Link"></i>
+              <span>По </span>
+              <span data-oe-many2one-id="1" data-oe-many2one-model="res.users" data-oe-contact-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;translate&quot;: false, &quot;type&quot;: &quot;contact&quot;, &quot;expression&quot;: &quot;question.create_uid&quot;, &quot;tagName&quot;: &quot;span&quot;, &quot;fields&quot;: [&quot;name&quot;, &quot;country_id&quot;], &quot;inherit_branding&quot;: null, &quot;country_image&quot;: true}"
+                style="display: inline-block;">
+                <address class="mb0" itemscope="itemscope" itemtype="http://schema.org/Organization">
+
+
+
+                  <div>
+
+                    <span itemprop="name">Administrator</span>
+
+
+                    <div>
+                      <span>
+                        <img class="img img-responsive country_flag" src="/web/image/res.country/233/image?unique=1758362" style="">
+                      </span>
+                    </div>
+                  </div>
+
+
+                  <div itemprop="address" itemscope="itemscope" itemtype="http://schema.org/PostalAddress">
+
+
+
+
+
+
+
+                  </div>
+                  <div>
+
+
+
+                  </div>
+
+
+                </address>
+              </span>
+              <span> • </span>
+              <span data-oe-original="2018-03-02 14:05:01">02.03.18, 14:05</span>
+              <span> • </span>
+              <span>6</span> Видs
+              <span> • </span>
+              <a href="/forum/1/question/discover-odoo-an-open-source-erp-5">
+
+                0 Комментарий
+
+              </a>
+
+            </small>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="mb16">
+
+        <div class="question">
+          <div class="pull-left">
+
+
+
+
+
+
+
+            <div class="vote text-center">
+              <a class="vote_up fa fa-caret-up no-decoration  karma_required" data-karma="5" data-href="/forum/1/post/how-to-setup-a-regular-postgresql-database-backup-6/upvote"></a>
+              <div class="vote_count text-muted">0</div>
+              <a class="vote_down fa fa-caret-down no-decoration  karma_required" data-karma="50" data-href="/forum/1/post/how-to-setup-a-regular-postgresql-database-backup-6/downvote"></a>
+
+
+
+            </div>
+
+          </div>
+
+          <div class="question-block">
+            <div class="question-name">
+              <a href="/forum/1/question/how-to-setup-a-regular-postgresql-database-backup-6">
+                <span>How to setup a regular PostgreSQL database backup</span>
+              </a>
+
+
+
+
+
+
+            </div>
+            <div></div>
+
+            <small class="text-muted">
+
+              <i class="fa fa-comments-o" title="Discussion"></i>
+
+              <span>По </span>
+              <span data-oe-many2one-id="1" data-oe-many2one-model="res.users" data-oe-contact-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;translate&quot;: false, &quot;type&quot;: &quot;contact&quot;, &quot;expression&quot;: &quot;question.create_uid&quot;, &quot;tagName&quot;: &quot;span&quot;, &quot;fields&quot;: [&quot;name&quot;, &quot;country_id&quot;], &quot;inherit_branding&quot;: null, &quot;country_image&quot;: true}"
+                style="display: inline-block;">
+                <address class="mb0" itemscope="itemscope" itemtype="http://schema.org/Organization">
+
+
+
+                  <div>
+
+                    <span itemprop="name">Administrator</span>
+
+
+                    <div>
+                      <span>
+                        <img class="img img-responsive country_flag" src="/web/image/res.country/233/image?unique=1758362" style="">
+                      </span>
+                    </div>
+                  </div>
+
+
+                  <div itemprop="address" itemscope="itemscope" itemtype="http://schema.org/PostalAddress">
+
+
+
+
+
+
+
+                  </div>
+                  <div>
+
+
+
+                  </div>
+
+
+                </address>
+              </span>
+              <span> • </span>
+              <span data-oe-original="2018-03-02 14:05:01">02.03.18, 14:05</span>
+              <span> • </span>
+              <span>5</span> Видs
+              <span> • </span>
+              <a href="/forum/1/question/how-to-setup-a-regular-postgresql-database-backup-6">
+
+                1 Комментарий
+
+              </a>
+
+            </small>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="mb16">
+
+        <div class="question">
+          <div class="pull-left">
+
+
+
+
+
+
+
+            <div class="vote text-center">
+              <a class="vote_up fa fa-caret-up no-decoration  karma_required" data-karma="5" data-href="/forum/1/post/how-to-configure-alerts-for-employee-contract-expiration-1/upvote"></a>
+              <div class="vote_count text-muted">1</div>
+              <a class="vote_down fa fa-caret-down no-decoration  karma_required" data-karma="50" data-href="/forum/1/post/how-to-configure-alerts-for-employee-contract-expiration-1/downvote"></a>
+
+
+
+            </div>
+
+          </div>
+
+          <div class="question-block">
+            <div class="question-name">
+              <a href="/forum/1/question/how-to-configure-alerts-for-employee-contract-expiration-1">
+                <span>How to configure alerts for employee contract expiration</span>
+              </a>
+
+
+
+
+
+
+            </div>
+            <div></div>
+
+            <a href="/forum/1/tag/contract-1/questions">
+              <span style="margin-right: 4px;" class="pull-right label label-default">Contract</span>
+            </a>
+
+            <a href="/forum/1/tag/action-2/questions">
+              <span style="margin-right: 4px;" class="pull-right label label-default">Action</span>
+            </a>
+
+            <small class="text-muted">
+              <i class="fa fa-question-circle" title="Question"></i>
+
+
+              <span>По </span>
+              <span data-oe-many2one-id="1" data-oe-many2one-model="res.users" data-oe-contact-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;translate&quot;: false, &quot;type&quot;: &quot;contact&quot;, &quot;expression&quot;: &quot;question.create_uid&quot;, &quot;tagName&quot;: &quot;span&quot;, &quot;fields&quot;: [&quot;name&quot;, &quot;country_id&quot;], &quot;inherit_branding&quot;: null, &quot;country_image&quot;: true}"
+                style="display: inline-block;">
+                <address class="mb0" itemscope="itemscope" itemtype="http://schema.org/Organization">
+
+
+
+                  <div>
+
+                    <span itemprop="name">Administrator</span>
+
+
+                    <div>
+                      <span>
+                        <img class="img img-responsive country_flag" src="/web/image/res.country/233/image?unique=1758362" style="">
+                      </span>
+                    </div>
+                  </div>
+
+
+                  <div itemprop="address" itemscope="itemscope" itemtype="http://schema.org/PostalAddress">
+
+
+
+
+
+
+
+                  </div>
+                  <div>
+
+
+
+                  </div>
+
+
+                </address>
+              </span>
+              <span> • </span>
+              <span data-oe-original="2018-03-02 14:05:01">02.03.18, 14:05</span>
+              <span> • </span>
+              <span>3</span> Видs
+              <span> • </span>
+              <a href="/forum/1/question/how-to-configure-alerts-for-employee-contract-expiration-1">
+
+                1 Ответ
+
+
+              </a>
+
+            </small>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+    <div class="col-sm-3" id="right-column">
+ 
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Держать в курсе</h3>
+        </div>
+        <div class="panel-body">
+
+          <div class="input-group js_follow" data-id="1" data-object="forum.forum" data-follow="off">
+            <input type="email" name="email" class="js_follow_email form-control" placeholder="ваш электронный адрес...">
+            <span class="input-group-btn">
+              <button href="#" class="btn btn-default js_unfollow_btn hidden">Отписаться</button>
+              <button href="#" class="btn btn-primary js_follow_btn">Подписаться</button>
+            </span>
+          </div>
+
+        </div>
+      </div>
+      <div class="panel panel-default" id="about_forum">
+        <div class="panel-heading">
+          <h3 class="panel-title">Об этом сообществе</h3>
+        </div>
+        <div class="panel-body">
+          <span>Это сообщество для профессионалов и энтузиастов наших продуктов и услуг. Делитесь и обсуждайте лучший контент
+            и новые маркетинговые идеи, построите свой профессиональный профиль и станьте лучшим маркетологом вместе.</span>
+          <a class="fa fa-arrow-right" href="/forum/1/faq"> Читать руководство</a>
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+<div class="oe_structure"></div>

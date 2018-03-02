@@ -1,4 +1,4 @@
-.box-block, .forums-list-item {
+.box-block, .forums-list-item, .section-navbar {
   background-color: #fff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); }
 
@@ -38,7 +38,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-sans-serif: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 *,
@@ -62,7 +62,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
   margin: 0;
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -3596,7 +3596,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -3680,7 +3680,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -5904,12 +5904,13 @@ body {
   position: relative; }
 
 .main {
-  z-index: 1; }
+  z-index: 1;
+  min-height: 600px; }
   .main__header {
-    padding: 125px 0 35px 0; }
+    padding: 125px 0 75px 0; }
     @media (max-width: 991.98px) {
       .main__header {
-        padding: 160px 0 25px 0; } }
+        padding: 160px 0 65px 0; } }
     .main__header[data-background-image] {
       background-position: center center;
       background-repeat: no-repeat no-repeat;
@@ -6401,6 +6402,40 @@ body {
 .footer {
   min-height: 350px;
   background-color: #333; }
+  .footer .container {
+    display: flex; }
+  .footer__bottom {
+    min-height: 60px;
+    background-color: #222; }
+
+.footer-block {
+  flex-basis: 25%;
+  flex-grow: 1;
+  padding: 25px 0 15px 0; }
+  .footer-block_grow_2 {
+    flex-grow: 2; }
+  .footer-block:last-child {
+    text-align: right; }
+  .footer-block__title {
+    color: #cccccc;
+    text-transform: uppercase;
+    font-weight: 700; }
+  .footer-block__list {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column; }
+  .footer-block__link {
+    color: #aaa;
+    font-weight: 300; }
+    .footer-block__link:hover {
+      color: #ccc; }
+  .footer-block__description {
+    color: #999999;
+    line-height: 1.2;
+    font-weight: 300;
+    font-size: .95em;
+    margin: 0 0 20px 0;
+    padding: 10px 0; }
 
 .forums-list {
   margin-top: 35px;
@@ -6487,3 +6522,132 @@ body {
       .forums-list-item__icon {
         width: 16px;
         height: 16px; } }
+
+.forum_intro {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 35px 30px;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 35px;
+  transition: all .5s ease-in-out 0s;
+  opacity: 1; }
+  .forum_intro__title {
+    font-size: 2em;
+    margin-bottom: 15px;
+    font-weight: 300;
+    text-align: center; }
+  .forum_intro__text {
+    font-weight: 300; }
+  .forum_intro__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(0, 0, 0, 0.25); }
+    .forum_intro__close:hover {
+      background-color: rgba(0, 0, 0, 0.45); }
+      .forum_intro__close:hover .forum_intro__close-icon {
+        fill: rgba(255, 255, 255, 0.75); }
+  .forum_intro__close-icon {
+    width: 24px;
+    height: 24px;
+    fill: rgba(255, 255, 255, 0.3); }
+  .forum_intro__registration-url {
+    display: block;
+    background-color: #00a09d;
+    color: #ffffff;
+    padding: 10px 15px;
+    margin-top: 15px; }
+    .forum_intro__registration-url:hover {
+      color: #ffffff;
+      background-color: #00bab6;
+      text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.3);
+      text-decoration: none; }
+
+.section-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  margin-bottom: 25px;
+  margin-top: -27px;
+  border-radius: 2px; }
+  .section-navbar__menu-togger {
+    display: none; }
+    @media (max-width: 991.98px) {
+      .section-navbar__menu-togger {
+        display: flex; } }
+  .section-navbar__title {
+    margin: 0 10px;
+    font-size: 1.2em;
+    color: #333; }
+    .section-navbar__title:hover {
+      color: #000000;
+      text-decoration: none; }
+    .section-navbar__title:after {
+      content: "|";
+      margin: 0 5px 0 10px;
+      color: #dedede; }
+      @media (max-width: 991.98px) {
+        .section-navbar__title:after {
+          display: none; } }
+  .section-navbar__menu {
+    flex-grow: 1; }
+    @media (min-width: 992px) {
+      .section-navbar__menu {
+        display: flex; } }
+    @media (max-width: 991.98px) {
+      .section-navbar__menu {
+        display: none; } }
+  .section-navbar__action-button {
+    display: block;
+    background-color: #00a09d;
+    color: #ffffff;
+    padding: 5px 15px; }
+    .section-navbar__action-button:hover {
+      color: #ffffff;
+      background-color: #00bab6;
+      text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.3);
+      text-decoration: none; }
+
+.section-menu-togger, .search-toggler {
+  cursor: pointer;
+  background-color: transparent;
+  padding: 5px; }
+  .section-menu-togger:hover, .search-toggler:hover {
+    background-color: rgba(0, 0, 0, 0.05); }
+  .section-menu-togger__icon, .search-toggler__icon {
+    width: 24px;
+    height: 24px;
+    fill: #666; }
+    .section-menu-togger__icon_open, .search-toggler__icon_open {
+      display: block; }
+      .collapsed .section-menu-togger__icon_open, .collapsed .search-toggler__icon_open {
+        display: none; }
+    .section-menu-togger__icon_close, .search-toggler__icon_close {
+      display: none; }
+      .collapsed .section-menu-togger__icon_close, .collapsed .search-toggler__icon_close {
+        display: block; }
+
+.section-menu-togger {
+  border: 1px solid #ccc; }
+
+.search-toggler {
+  border: 0;
+  margin-right: 15px; }
+
+.section-menu__link {
+  display: block;
+  padding: 5px 10px;
+  color: #666666; }
+  .section-menu__link:hover {
+    color: #333333;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.05); }
