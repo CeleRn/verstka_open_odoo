@@ -1,0 +1,16 @@
+<% if (page.headerBg) { %>
+  <% if (page.banner !== undefined) { %>
+    <div class="main__header main__header_inverted" data-background-image="<%= page.banner %>">
+      <div class="main__header-bg-gray"></div>
+  <% } else { %>
+    <div class="main__header main__header_inverted">
+  <% } %>
+<% } else { %>
+  <div class="main__header">
+<% } %>
+<div class="container">
+    <h1 class="main-title"><%= page.title %></h1>
+</div>
+
+
+</div>

@@ -1,25 +1,10 @@
 .header {
-  // background-image: linear-gradient(150deg, #875A7B 20%, #62495B 80%);
-  min-height: 250px;
-  position: relative;
-  &[data-background-image] {
-    background-position: center center; // background-size: cover;
-    background-repeat: no-repeat no-repeat; // z-index: -1;
-  }
-  &_invert {
-    background: #75526b;
-    background-image: linear-gradient(150deg, #875A7B 20%, #62495B 80%);
-  }
-  &__bg-gray {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0; // z-index: -2;
-    .header[data-background-image] & {
-      background-color: rgba(0, 0, 0, 0.6);
-    }
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+
   &__main {
     background-color: #fff;
     padding: 0; // z-index: 2;
@@ -36,7 +21,6 @@
 
 .logo {
   order: 2;
-  @include media-breakpoint-down(md) {}
   &__link {
     display: flex;
     align-items: center;

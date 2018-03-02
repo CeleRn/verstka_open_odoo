@@ -1,5 +1,5 @@
 ---
-layout: docs-index
+layout: slides-index
 title: Публикации
 breadcrumbs:
   - name: Публикации

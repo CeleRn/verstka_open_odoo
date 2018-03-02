@@ -7,9 +7,7 @@
         <ol class="breadcrumb__list" itemscope itemtype="http://schema.org/BreadcrumbList">
           <li class="breadcrumb__item">
             <a href="/" class="breadcrumb__link breadcrumb__link_home">
-              <svg class="breadcrumb__icon">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons-sprite.svg#home"></use>
-              </svg>
+              <%- partial('../svg-sprite-element', {icon: "home", cssSelector: "breadcrumb__icon"}) %>
             </a>
           </li>
           <% var i=1 %>

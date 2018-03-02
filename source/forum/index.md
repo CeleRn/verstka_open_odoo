@@ -1,6 +1,6 @@
 ---
 layout: forum-index
-title: Документация
+title: Форумы
 headerBg: true
 breadcrumbs:
   - name: Форумы

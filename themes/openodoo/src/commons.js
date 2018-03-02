@@ -54,3 +54,6 @@ require('./icons/edit.svg');
 require('./icons/close.svg');
 require('./icons/person.svg');
 require('./icons/mobile.svg');
+require('./icons/live-help.svg');
+require('./icons/link.svg');
+require('./icons/people.svg');

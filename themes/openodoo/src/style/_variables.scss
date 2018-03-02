@@ -35,6 +35,7 @@ $accent-color: #00a09d;
 $dropdown-link-hover-bg:    $gray-200;
 
 $box-shadow: 0 1px 2px rgba(0,0,0,.1);
+$box-shadow-hover: -2px 4px 4px rgba(0,0,0,.1);
 
 $link-color:                $main-color;
 
@@ -48,7 +49,7 @@ $font-family-sans-serif: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe 
 
 $font-size-base:              1rem;
 
-$h1-font-size:                $font-size-base * 2 !default;
+$h1-font-size:                $font-size-base * 2.5 !default;
 $h2-font-size:                $font-size-base * 1.5 !default;
 $h3-font-size:                $font-size-base * 1.25 !default;
 $h4-font-size:                $font-size-base * 1.125 !default;
