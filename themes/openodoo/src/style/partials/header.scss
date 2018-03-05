@@ -4,7 +4,6 @@
   left: 0;
   right: 0;
   z-index: 10;
-
   &__main {
     background-color: #fff;
     padding: 0; // z-index: 2;
@@ -98,9 +97,8 @@
     background-color: rgba(0, 0, 0, 0.05);
     text-decoration: none;
   }
-  &:active {
-    outline: none;
-    border: none;
+  &:focus, &:active {
+    outline: 0;
   }
   .header_invert & {
     color: #ffffff;
@@ -149,9 +147,8 @@
     background-color: rgba(0, 0, 0, 0.05);
     text-decoration: none;
   }
-  &:active {
-    outline: none;
-    border: none;
+  &:focus, &:active {
+    outline: 0;
   }
   .header_invert & {
     color: #ffffff;

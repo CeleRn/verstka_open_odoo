@@ -29,11 +29,22 @@ import 'popper.js/dist/umd/popper';
 import 'bootstrap/js/dist/tab';
 import 'bootstrap/js/dist/dropdown';
 import 'bootstrap/js/dist/collapse';
+import 'bootstrap/js/dist/alert';
+import 'bootstrap/js/dist/popover';
 
 
 
 // Мои скрипты
 import './js/my-stcripts.js';
+
+
+
+
+//////// Флаги стран
+
+require('./images/flags/germany.png');
+require('./images/flags/russia.png');
+require('./images/flags/usa.png');
 
 /////////////////////////////////
 // Загрузка иконок для спрайта //
@@ -58,3 +69,15 @@ require('./icons/live-help.svg');
 require('./icons/link.svg');
 require('./icons/people.svg');
 require('./icons/section-menu.svg');
+require('./icons/question.svg');
+require('./icons/date.svg');
+require('./icons/eye.svg');
+require('./icons/answer.svg');
+require('./icons/forum.svg');
+require('./icons/done.svg');
+require('./icons/star.svg');
+require('./icons/reply.svg');
+require('./icons/delete.svg');
+require('./icons/warning.svg');
+require('./icons/chat.svg');
+require('./icons/share.svg');
