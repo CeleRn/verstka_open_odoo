@@ -32,7 +32,7 @@
     
         </div>
     
-        <div class="forum-item__middle">
+        <div class="forum-item__middle forum-item__middle_flex-end">
           <div class="forum-item__tags-list">
               <% post.tags.forEach(function (tag, i) { %>
                 <a href="#" class="forum-item__tag"><%= tag.name %></a>
@@ -59,7 +59,7 @@
             </div>
             <div class="forum-item__footer-item ">
               <%- partial('common/svg-sprite-element', {icon: "answer", cssSelector: "forum-item__footer-icon"}) %>
-                <a href="#" class="forum-item__footer-item-value"><%= post.answers %> <%= declOfNum(post.answers, post.answersName) %></a>
+                <a href="<%= post.url %>" class="forum-item__footer-item-value"><%= post.answers %> <%= declOfNum(post.answers, post.answersName) %></a>
             </div>
           </div>
         </div>

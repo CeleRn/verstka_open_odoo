@@ -43,13 +43,14 @@ module.exports = {
 
     output: {
         path: path.join(__dirname, "source", "assets"),
-        publicPath: '/',
+        publicPath: '/assets/',
         filename: 'js/[name].js'
     },
     resolve: {
         alias: {
             'inputmask.dependencyLib': path.join(__dirname, 'node_modules/jquery.inputmask/extra/dependencyLibs/inputmask.dependencyLib.jqlite.js'),
-            'inputmask': path.join(__dirname, 'node_modules/jquery.inputmask/dist/inputmask/inputmask.js')
+            'inputmask': path.join(__dirname, 'node_modules/jquery.inputmask/dist/inputmask/inputmask.js'),
+            'CodeMirror': 'codemirror'
         },
         modules: ['node_modules'],
         extensions: ['.js', ".json"]
@@ -87,7 +88,7 @@ module.exports = {
                 use: 'file?name=images/[name].[ext]'
             }, { // Копируем шрифты
                 test: /\.(ttf|eot|woff|woff2)$/,
-                use: 'file?name=assets/fonts/[path][name].[ext]'
+                use: 'file?name=fonts/[name].[ext]'
             }, {
                 test: /\.svg$/,
                 include: path.join(__dirname, "src", "icons"),
@@ -136,7 +137,8 @@ module.exports = {
             Popover: "exports-loader?Popover!bootstrap/js/dist/popover",
             Scrollspy: "exports-loader?Scrollspy!bootstrap/js/dist/scrollspy",
             Tab: "exports-loader?Tab!bootstrap/js/dist/tab",
-            Tooltip: "exports-loader?Tooltip!bootstrap/js/dist/tooltip"
+            Tooltip: "exports-loader?Tooltip!bootstrap/js/dist/tooltip",
+            'require.specified': 'require.resolve'
         }),
         // new webpack.optimize.CommonsChunkPlugin({
         //     name: "commons",

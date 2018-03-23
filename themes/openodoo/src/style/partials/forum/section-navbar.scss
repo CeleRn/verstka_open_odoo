@@ -153,10 +153,15 @@
         display: block;
         padding: 5px 10px;
         color: #777777;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent;
         &:hover {
             color: #333333;
             text-decoration: none;
             background-color: rgba(0, 0, 0, 0.05);
+        }
+        &.active {
+            border-bottom-color: rgba($main-color, .5);
         }
         @include media-breakpoint-down(md) {
             text-align: right;

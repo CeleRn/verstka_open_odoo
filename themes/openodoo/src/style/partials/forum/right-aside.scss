@@ -4,12 +4,12 @@
     margin-bottom: 15px;
     &__title {
         font-size: 1.1em;
-        color: #333333;
+        color: #666;
         margin-bottom: 5px;
     }
     &__body {
         padding: 15px 0;
-        color: #666666;
+        color: #888;
         p {
             font-size: .85em;
             line-height: 1.35em;
@@ -69,5 +69,13 @@
         &.hidden {
             display: none;
         }
+    }
+}
+.follovers {
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: center;
+    &__count {
+        font-weight: 700;
     }
 }

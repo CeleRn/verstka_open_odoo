@@ -31,7 +31,12 @@ import 'bootstrap/js/dist/dropdown';
 import 'bootstrap/js/dist/collapse';
 import 'bootstrap/js/dist/alert';
 import 'bootstrap/js/dist/popover';
+import 'bootstrap/js/dist/modal';
 
+//// Summernote
+
+import 'summernote/dist/summernote-bs4';
+import 'summernote/dist/lang/summernote-ru-RU';
 
 
 // Мои скрипты
@@ -81,3 +86,9 @@ require('./icons/delete.svg');
 require('./icons/warning.svg');
 require('./icons/chat.svg');
 require('./icons/share.svg');
+require('./icons/cached.svg');
+require('./icons/note-on.svg');
+require('./icons/note-off.svg');
+require('./icons/check.svg');
+
+
